@@ -5,7 +5,7 @@ go 1.23.0
 toolchain go1.23.1
 
 require (
-	github.com/nyxless/nyx v0.0.0-20250619070704-9fc466121c61
+	github.com/nyxless/nyx v0.0.0-20260204071726-2a2a3e42bc17
 	golang.org/x/sync v0.14.0
 	google.golang.org/grpc v1.72.1
 )
@@ -32,5 +32,3 @@ require (
 	google.golang.org/protobuf v1.36.6 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
-
-replace github.com/nyxless/nyx => ../nyx
