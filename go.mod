@@ -2,10 +2,10 @@ module github.com/nyxless/nyxc
 
 go 1.23.0
 
-toolchain go1.23.1
+toolchain go1.24.2
 
 require (
-	github.com/nyxless/nyx v0.0.0-20260204071726-2a2a3e42bc17
+	github.com/nyxless/nyx v0.0.0-20260211052015-011f5fd14f6b
 	golang.org/x/sync v0.14.0
 	google.golang.org/grpc v1.72.1
 )
