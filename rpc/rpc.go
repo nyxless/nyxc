@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/nyxless/nyx/x/pb"
 	"google.golang.org/grpc"
+	"log"
 	"sync"
 	"time"
 )
@@ -103,7 +104,7 @@ func (p *RpcPool) Put(conn *RpcClient) { // {{{
 				conn.Close()
 			}
 		} else {
-			fmt.Errorf("rpcClient error")
+			Println("rpcClient error")
 			conn.Close()
 		}
 	}
@@ -162,10 +163,8 @@ func DialGrpc(addr string, opts []grpc.DialOption) (*RpcClient, error) { // {{{
 	}, nil
 } // }}}
 
-func Println(a ...any) (n int, err error) { // {{{
+func Println(a ...any) { // {{{
 	if Debug {
-		return fmt.Println(a...)
+		log.Println(a...)
 	}
-
-	return
 } // }}}
