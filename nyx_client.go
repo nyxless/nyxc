@@ -135,7 +135,9 @@ func WithContext(ctx context.Context) grpc.CallOption { // {{{
 func WithHeaders(headers map[string]string) grpc.CallOption { // {{{
 	return &rpc.CallOption{
 		F: func(r *rpc.RpcOptions) {
-			r.Headers = headers
+			for k := range headers {
+				r.Headers[k] = headers[k]
+			}
 		},
 	}
 } // }}}
